@@ -1,0 +1,11 @@
+p {
+    font-family: Lato;
+  }
+  
+  textarea {
+    width: 50%;
+    font-size: 100%;
+  }
+  .App{
+    background: red;
+  }
