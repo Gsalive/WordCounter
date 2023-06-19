@@ -22,21 +22,14 @@ class App extends Component {
       .catch(err => this.setState({ text: `Error: ${err.message}` }));
   }
 
-  /*
-    Fetches three parapgraphs from https://baconipsum.com/
-  */
+  
   getText = async () => {
     
     const body = ("");
     return body;
   }
 
-  /*
-    When pressing Enter key individual elements in the array will come
-    with the 'break' character and producing an incorrect word count. This function
-    removes those breaks and splits them.
-    i.e. ["↵↵Turkey","pork","cow","tri-tip","↵↵Bresaola↵↵brisket","pork"]
-  */
+  
   removeBreaks = arr => {
     const index = arr.findIndex(el => el.match(/\r?\n|\r/g));
     
@@ -52,11 +45,7 @@ class App extends Component {
     return this.removeBreaks(newArray);
   }
 
-  /*
-    When entering multiple spaces or breaks (Enter key), the array will come
-    with empty elements. This function removes those elements. 
-    i.e. ["turkey.", "", "Bacon"]
-  */
+
   removeEmptyElements = arr => {
     const index = arr.findIndex(el => el.trim() === '');
 
